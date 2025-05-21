@@ -25,7 +25,7 @@ alphabet = string.digits + string.ascii_lowercase + string.ascii_uppercase + str
 if not os.path.exists('images2'):
     os.system('wget https://huggingface.co/datasets/JingyeChen22/TextDiffuser/resolve/main/images2.zip')
     with zipfile.ZipFile('images2.zip', 'r') as zip_ref:
-        zip_ref.extractall('.')
+        zip_ref.extractall('./images2')
 
 # os.system('nvidia-smi')
 os.system('ls')
@@ -688,6 +688,5 @@ with gr.Blocks() as demo:
         </div>
         """
     )
-
 
 demo.launch()
